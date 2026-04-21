@@ -1,0 +1,73 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "cmd-g": [
+        "task::Spawn",
+        { "task_name": "LazyGit", "reveal_target": "center" }
+      ]
+    }
+  },
+
+  // Go to definition: cmd-enter in a normal editor (not AI context editors)
+  // Disable f12 (default go-to-definition)
+  {
+    "context": "Editor",
+    "bindings": {
+      "f12": null
+    }
+  },
+  // cmd-enter -> go to definition in full editors (not AI/context editors)
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "cmd-enter": "editor::GoToDefinition"
+    }
+  },
+
+  // In search results panel: cmd-enter opens the result in the file
+  // menu::SecondaryConfirm is the action for cmd-enter in pickers/search panels
+  // This is already the default, but explicitly set here for clarity
+  {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "cmd-enter": "search::SelectAllMatches"
+    }
+  },
+
+  // Navigate back/forward through cursor history
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-alt-left": "pane::GoBack",
+      "cmd-alt-right": "pane::GoForward"
+    }
+  },
+
+  // cmd-backspace: delete entire line (like WebStorm)
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "cmd-backspace": "editor::DeleteLine"
+    }
+  }
+]

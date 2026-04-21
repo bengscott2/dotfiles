@@ -1,0 +1,86 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "icon_theme": "Zed (Default)",
+  "agent": {
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-codex",
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+  },
+  "languages": {
+    "TypeScript": {
+      "format_on_save": "on",
+      "prettier": { "allowed": true },
+      "formatter": "prettier",
+    },
+    "TSX": {
+      "format_on_save": "on",
+      "prettier": { "allowed": true },
+      "formatter": "prettier",
+    },
+    "JavaScript": {
+      "format_on_save": "on",
+      "prettier": { "allowed": true },
+      "formatter": "prettier",
+    },
+    "JSX": {
+      "format_on_save": "on",
+      "prettier": { "allowed": true },
+      "formatter": "prettier",
+    },
+    "JSON": {
+      "format_on_save": "on",
+      "prettier": { "allowed": true },
+      "formatter": "prettier",
+    },
+    "CSS": {
+      "format_on_save": "on",
+      "prettier": { "allowed": true },
+      "formatter": "prettier",
+    },
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true,
+  },
+  "terminal": {
+    "font_family": "JetBrainsMono NF",
+    "font_fallbacks": ["monospace"],
+  },
+  "cursor_shape": "block",
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+}
